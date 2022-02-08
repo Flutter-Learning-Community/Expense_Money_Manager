@@ -1,4 +1,4 @@
-import 'dart:io';
+import 'dart:io' show Platform;
 import 'package:flutter/material.dart';
 
 import './widgets/new_transaction_form.dart';

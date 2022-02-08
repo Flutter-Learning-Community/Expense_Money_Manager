@@ -122,7 +122,7 @@ class _NewTransactionFormState extends State<NewTransactionForm> {
                 if (value.isEmpty) return "Title cannot be empty";
                 return null;
               },
-              autovalidate: _autoValidateToggle,
+              //autovalidate: _autoValidateToggle,
               focusNode: _titleFocus,
               onFieldSubmitted: (_) =>
                   _fieldFocusChange(context, _titleFocus, _amountFocus),
@@ -144,7 +144,7 @@ class _NewTransactionFormState extends State<NewTransactionForm> {
                 prefixIcon: Icon(Icons.local_atm),
                 hintText: "Enter the amount",
               ),
-              autovalidate: _autoValidateToggle,
+              //autovalidate: _autoValidateToggle,
               validator: (value) {
                 RegExp regex = RegExp('[0-9]+(\.[0-9]+)?');
                 if (!regex.hasMatch(value) || double.tryParse(value) == null)
@@ -184,7 +184,7 @@ class _NewTransactionFormState extends State<NewTransactionForm> {
                           prefixIcon: Icon(Icons.calendar_today),
                           suffixIcon: Icon(Icons.arrow_drop_down),
                         ),
-                        autovalidate: _autoValidateToggle,
+                        // autovalidate: _autoValidateToggle,
                         validator: (value) {
                           if (value.isEmpty) return "Please select a date";
                           return null;
@@ -217,7 +217,7 @@ class _NewTransactionFormState extends State<NewTransactionForm> {
                           prefixIcon: Icon(Icons.schedule),
                           suffixIcon: Icon(Icons.arrow_drop_down),
                         ),
-                        autovalidate: _autoValidateToggle,
+                        // autovalidate: _autoValidateToggle,
                         validator: (value) {
                           if (value.isEmpty) return "Please select a date";
                           return null;
